@@ -1,0 +1,137 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Creative Designer",
+    "archetype": "Soft Swiss Security",
+    "principles": [
+      "Clarity is Safety: Ambiguity in a security app creates panic. Be explicit.",
+      "Calm Authority: The UI should feel like a reliable guard, not a noisy siren.",
+      "Visual Hierarchy: Status (Armed/Disarmed) is the single most important piece of information.",
+      "Touch-Friendly: Buttons and zones must be large enough for frantic tapping."
+    ]
+  },
+  "typography": {
+    "primary_font": "Inter",
+    "secondary_font": "Manrope",
+    "heading_styles": {
+      "h1": "font-manrope font-bold text-4xl tracking-tight text-slate-900",
+      "h2": "font-manrope font-semibold text-2xl tracking-tight text-slate-900",
+      "h3": "font-manrope font-medium text-xl text-slate-800",
+      "label": "font-inter text-xs font-bold uppercase tracking-wider text-slate-500"
+    },
+    "body_styles": {
+      "base": "font-inter text-base text-slate-600 leading-relaxed",
+      "small": "font-inter text-sm text-slate-500"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "primary": "#0F172A",
+      "primary_foreground": "#F8FAFC",
+      "secondary": "#F1F5F9",
+      "secondary_foreground": "#0F172A",
+      "accent": "#E2E8F0",
+      "border": "#E2E8F0",
+      "muted": "#64748B"
+    },
+    "status": {
+      "safe": {
+        "bg": "#ECFDF5",
+        "text": "#059669",
+        "border": "#A7F3D0"
+      },
+      "warning": {
+        "bg": "#FFFBEB",
+        "text": "#D97706",
+        "border": "#FDE68A"
+      },
+      "danger": {
+        "bg": "#FFF1F2",
+        "text": "#E11D48",
+        "border": "#FECDD3"
+      },
+      "neutral": {
+        "bg": "#F1F5F9",
+        "text": "#475569",
+        "border": "#E2E8F0"
+      }
+    },
+    "gradients": {
+      "armed": "bg-gradient-to-br from-rose-500 to-red-600",
+      "disarmed": "bg-gradient-to-br from-emerald-400 to-teal-500",
+      "glass": "bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm"
+    }
+  },
+  "layout": {
+    "grid_system": "Bento Grid",
+    "spacing": {
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "card_gap": "gap-6",
+      "section_gap": "gap-12"
+    },
+    "structure": {
+      "sidebar": "w-64 hidden md:flex flex-col border-r border-slate-200 bg-white h-screen sticky top-0",
+      "main_content": "flex-1 bg-slate-50 min-h-screen",
+      "mobile_nav": "md:hidden fixed bottom-0 w-full bg-white border-t border-slate-200 z-50"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 shadow-md rounded-lg px-6 py-3 font-medium transition-all active:scale-95",
+      "secondary": "bg-white text-slate-900 border border-slate-200 hover:bg-slate-50 shadow-sm rounded-lg px-6 py-3 font-medium transition-all",
+      "danger": "bg-rose-600 text-white hover:bg-rose-700 shadow-md rounded-lg px-6 py-3 font-medium transition-all",
+      "ghost": "bg-transparent text-slate-600 hover:bg-slate-100 hover:text-slate-900 rounded-lg px-4 py-2 transition-all"
+    },
+    "cards": {
+      "base": "bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200",
+      "interactive": "cursor-pointer hover:border-slate-300 active:border-slate-400"
+    },
+    "badges": {
+      "base": "inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium",
+      "safe": "bg-emerald-100 text-emerald-800",
+      "warning": "bg-amber-100 text-amber-800",
+      "danger": "bg-rose-100 text-rose-800"
+    }
+  },
+  "assets": {
+    "images": {
+      "zone_living_room": "https://images.unsplash.com/photo-1597665863042-47e00964d899?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxNzV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBicmlnaHQlMjBsaXZpbmclMjByb29tJTIwaW50ZXJpb3J8ZW58MHx8fHwxNzY5NzgyNTUxfDA&ixlib=rb-4.1.0&q=85",
+      "sensor_device": "https://images.unsplash.com/photo-1753039495488-434a2fe53e41?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxob21lJTIwc2VjdXJpdHklMjBzZW5zb3IlMjBkZXZpY2V8ZW58MHx8fHwxNzY5NzgyNTU0fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "mapping": {
+        "dashboard": "LayoutDashboard",
+        "zones": "Map",
+        "sensors": "Radio",
+        "history": "History",
+        "settings": "Settings",
+        "motion": "Activity",
+        "door": "DoorOpen",
+        "window": "Maximize",
+        "alert": "Siren",
+        "check": "CheckCircle2",
+        "lock": "Lock",
+        "unlock": "Unlock"
+      }
+    }
+  },
+  "motion": {
+    "transitions": "transition-all duration-200 ease-in-out",
+    "hover_lift": "hover:-translate-y-1",
+    "active_press": "active:scale-95"
+  },
+  "universal_guidelines": [
+    "Use 'Inter' for all body text and 'Manrope' for headings.",
+    "Never use pure black (#000000). Use Slate-900 (#0F172A) instead.",
+    "Always provide visual feedback for interactions (hover, active, focus).",
+    "Use 'sonner' for all toast notifications.",
+    "Ensure all interactive elements have 'data-testid' attributes.",
+    "Maintain a clean, whitespace-heavy layout to reduce cognitive load.",
+    "Use the 'Bento Grid' layout for the dashboard overview.",
+    "Prioritize accessibility: Ensure high contrast for text and interactive elements."
+  ],
+  "instructions_to_main_agent": "You are building a Home Intruder Alarm System. Follow the design guidelines strictly. Use the provided image URLs for zones and devices. Implement the 'Bento Grid' layout for the dashboard. Ensure the 'Armed/Disarmed' status is the most prominent element on the screen. Use 'lucide-react' for icons. Create a responsive layout with a sidebar for desktop and a bottom nav for mobile."
+}
