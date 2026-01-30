@@ -240,11 +240,14 @@ export default function Zones() {
 
       {/* Create/Edit Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="sm:max-w-md" data-testid="zone-dialog">
+        <DialogContent className="sm:max-w-md" data-testid="zone-dialog" aria-describedby="zone-dialog-description">
           <DialogHeader>
             <DialogTitle className="font-manrope">
               {selectedZone ? "Edit Zone" : "Create Zone"}
             </DialogTitle>
+            <p id="zone-dialog-description" className="text-sm text-slate-500">
+              {selectedZone ? "Update the zone details below" : "Add a new security zone to your home"}
+            </p>
           </DialogHeader>
           <form onSubmit={handleSubmit}>
             <div className="space-y-4 py-4">

@@ -391,11 +391,14 @@ export default function Sensors() {
 
       {/* Create/Edit Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="sm:max-w-md" data-testid="sensor-dialog">
+        <DialogContent className="sm:max-w-md" data-testid="sensor-dialog" aria-describedby="sensor-dialog-description">
           <DialogHeader>
             <DialogTitle className="font-manrope">
               {selectedSensor ? "Edit Sensor" : "Add Sensor"}
             </DialogTitle>
+            <p id="sensor-dialog-description" className="text-sm text-slate-500">
+              {selectedSensor ? "Update the sensor configuration" : "Configure a new sensor for monitoring"}
+            </p>
           </DialogHeader>
           <form onSubmit={handleSubmit}>
             <div className="space-y-4 py-4">
