@@ -70,11 +70,31 @@ module.exports = {
   				to: {
   					height: '0'
   				}
+  			},
+  			'pulse-danger': {
+  				'0%, 100%': {
+  					boxShadow: '0 0 0 0 rgba(225, 29, 72, 0.4)'
+  				},
+  				'50%': {
+  					boxShadow: '0 0 0 12px rgba(225, 29, 72, 0)'
+  				}
+  			},
+  			'slide-in': {
+  				from: {
+  					opacity: '0',
+  					transform: 'translateY(10px)'
+  				},
+  				to: {
+  					opacity: '1',
+  					transform: 'translateY(0)'
+  				}
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+  			'pulse-danger': 'pulse-danger 2s infinite',
+  			'slide-in': 'slide-in 0.3s ease-out'
   		}
   	}
   },
