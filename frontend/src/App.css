@@ -1,34 +1,59 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Additional App Styles */
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.bento-card {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.bento-card-interactive {
+    @apply cursor-pointer hover:border-slate-300 active:border-slate-400;
 }
 
-.App-link {
-    color: #61dafb;
+/* Armed state animations */
+.armed-glow {
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.3);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.disarmed-glow {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+/* Sensor card styles */
+.sensor-card {
+    @apply p-4 rounded-lg border transition-all duration-200;
+}
+
+.sensor-active {
+    @apply bg-emerald-50 border-emerald-200;
+}
+
+.sensor-inactive {
+    @apply bg-slate-50 border-slate-200;
+}
+
+.sensor-triggered {
+    @apply bg-rose-50 border-rose-300 animate-pulse-danger;
+}
+
+.sensor-offline {
+    @apply bg-slate-100 border-slate-300 opacity-60;
+}
+
+/* Mobile bottom nav */
+.mobile-nav-item {
+    @apply flex flex-col items-center justify-center py-2 px-4 text-slate-500 transition-colors;
+}
+
+.mobile-nav-item.active {
+    @apply text-slate-900;
+}
+
+/* Zone card image overlay */
+.zone-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent;
 }
