@@ -7,11 +7,23 @@
 }
 
 .bento-card {
-    @apply bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm;
+}
+
+.bento-card:hover {
+    @apply shadow-md;
 }
 
 .bento-card-interactive {
-    @apply cursor-pointer hover:border-slate-300 active:border-slate-400;
+    @apply cursor-pointer;
+}
+
+.bento-card-interactive:hover {
+    @apply border-slate-300;
+}
+
+.bento-card-interactive:active {
+    @apply border-slate-400;
 }
 
 /* Armed state animations */
@@ -37,7 +49,8 @@
 }
 
 .sensor-triggered {
-    @apply bg-rose-50 border-rose-300 animate-pulse-danger;
+    @apply bg-rose-50 border-rose-300;
+    animation: pulse-danger 2s infinite;
 }
 
 .sensor-offline {
@@ -55,5 +68,5 @@
 
 /* Zone card image overlay */
 .zone-card-overlay {
-    @apply absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.2), transparent);
 }
